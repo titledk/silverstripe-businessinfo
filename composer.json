@@ -1,0 +1,21 @@
+{
+  "name": "titledk/silverstripe-businessinfo",
+  "description": "Manage your business information under Settings, and access it sitewide.",
+  "type": "silverstripe-module",
+  "homepage": "https://github.com/titledk/silverstripe-businessinfo",
+  "keywords": ["silverstripe", "contact", "info", "business info"],
+  "license": "MIT",
+  "authors": [
+    {"name": "Anselm Christophersen","email": "ac@anselm.dk"}
+  ],
+  "support": {
+    "issues": "https://github.com/titledk/silverstripe-businessinfo/issues"
+  },
+  "require": {
+    "silverstripe/cms": "~3.1",
+    "silverstripe/framework": "~3.1"
+  },
+  "extra": {
+    "installer-name": "businessinfo",
+  }
+}
