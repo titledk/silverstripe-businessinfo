@@ -16,6 +16,6 @@
     "silverstripe/framework": "~3.1"
   },
   "extra": {
-    "installer-name": "businessinfo",
+    "installer-name": "businessinfo"
   }
 }
