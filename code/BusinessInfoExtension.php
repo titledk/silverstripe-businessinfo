@@ -40,7 +40,23 @@ class BusinessInfoExtension extends DataExtension {
 //			TextField::create('VatNumber'),
 		));
 		
-	}	
+	}
+	
+	/**
+	 * Return address so it's suitable for a one-line google maps string,
+	 * stripping out all breaks, etc
+	 */
+	public function getAddressForGoogleMaps(){
+		$address = $this->owner->Address;
+		$str = str_replace(array(
+			"\r\n", 
+			"\r", 
+			"\n",
+			"'"
+			), " ", $address);
+		
+		return $str;
+	}
 	
 	
 	
