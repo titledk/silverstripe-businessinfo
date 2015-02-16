@@ -19,7 +19,8 @@ class BusinessInfoExtension extends DataExtension {
 		//'MainContactPhone' => 'Varchar(255)',
 		'Email' => 'Varchar(255)',
 //		'Website' => 'Varchar(255)',
-//		'VatNumber' => 'Varchar(255)',
+		'VatNumber' => 'Varchar(255)',
+		'Bank' => 'Text',
 	);
 
 	
@@ -37,7 +38,8 @@ class BusinessInfoExtension extends DataExtension {
 //				->setRightTitle('Direct phone (mobile) of the primary contact. Can be left out if this is the same as the business\' phone.'),
 			TextField::create('Email'),
 //			TextField::create('Website'),
-//			TextField::create('VatNumber'),
+			TextField::create('VatNumber', 'VAT Number'),
+			TextareaField::create('Bank'),
 		));
 		
 	}
