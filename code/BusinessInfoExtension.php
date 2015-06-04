@@ -2,10 +2,10 @@
 /**
  * Business Info Extension
  * Adds Business info to a given {@see DataObject}
- * 
+ *
  * @package businessinfo
  * @author Anselm Christophersen <ac@anselm.dk>
- * 
+ *
  */
 class BusinessInfoExtension extends DataExtension {
 
@@ -23,9 +23,9 @@ class BusinessInfoExtension extends DataExtension {
 		'Bank' => 'Text',
 	);
 
-	
+
 	function updateCMSFields(FieldList $fields) {
-		
+
 		$fields->addFieldsToTab('Root.BusinessInfo', array(
 			TextField::create('BusinessName'),
 			TextField::create('BusinessTagline'),
@@ -41,9 +41,9 @@ class BusinessInfoExtension extends DataExtension {
 			TextField::create('VatNumber', 'VAT Number'),
 			TextareaField::create('Bank'),
 		));
-		
+
 	}
-	
+
 	/**
 	 * Return address so it's suitable for a one-line google maps string,
 	 * stripping out all breaks, etc
@@ -51,15 +51,29 @@ class BusinessInfoExtension extends DataExtension {
 	public function getAddressForGoogleMaps(){
 		$address = $this->owner->Address;
 		$str = str_replace(array(
-			"\r\n", 
-			"\r", 
+			"\r\n",
+			"\r",
 			"\n",
 			"'"
 			), " ", $address);
-		
 		return $str;
 	}
-	
-	
-	
+
+	/**
+	 * Address on one line - comma separated
+	 * @return string
+	 */
+	public function getAddressForOneLine() {
+		$address = $this->owner->Address;
+		$str = str_replace(array(
+			"\r\n",
+			"\r",
+			"\n",
+			"'"
+		), ", ", $address);
+		return rtrim($str, ', ');
+	}
+
+
+
 }
