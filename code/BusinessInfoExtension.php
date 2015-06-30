@@ -13,6 +13,7 @@ class BusinessInfoExtension extends DataExtension {
 		'BusinessName' => 'Varchar(255)',
 		'BusinessTagline' => 'Varchar(255)',
 		'Address' => 'Text',
+		'OpeningHours' => 'Text',
 		'Phone' => 'Varchar(255)',
 		//'Fax' => 'Varchar(255)',
 		'MainContact' => 'Varchar(255)', //Full name of main contact
@@ -30,6 +31,7 @@ class BusinessInfoExtension extends DataExtension {
 			TextField::create('BusinessName'),
 			TextField::create('BusinessTagline'),
 			TextareaField::create('Address'),
+			TextareaField::create('OpeningHours'),
 			TextField::create('Phone'),
 			//TextField::create('Fax'),
 			TextField::create('MainContact', 'Primary Contact')
