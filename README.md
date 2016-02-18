@@ -9,7 +9,7 @@ The `BusinessInfoExtension` is supposed to be added to `SiteConfig`, but could p
 
 ## Basic Setup
 
-By default this module changes nothing on your installation.    
+By default this module changes nothing on your installation.
 You'll need to add the following lines to your `mysite/_config/config.yml` file:
 
 	SiteConfig:
